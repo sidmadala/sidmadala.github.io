@@ -1,0 +1,66 @@
+baseURL = "https://sidmadala.github.io/"
+title = "Siddarth Madala"
+
+defaultContentLanguage = 'en'
+languageCode = "en-us"
+
+enableEmoji = "true"
+assetDir = "assets"
+
+# This is necessary due to a bug (?) in how Hugo stores its sites
+# See: https://discourse.gohugo.io/t/multilingual-page-404-not-found/31729/3
+publishDir = "public"
+
+# This is not necessary, but removes some warnings as well
+# as removes "tags" from the site map
+disableKinds = ["taxonomy"]
+
+# This anables for rendering arbitrary html in markdown files.
+[markup.goldmark.renderer]
+unsafe = true
+
+# https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css
+[markup.highlight]
+noClasses = false
+
+# [languages]
+# [languages.en]
+# weight = 1               # Always make sure defaultContentLanguage has lowest weight
+# LanguageName = "English"
+
+shortdescription = "PhD Candidate at UIUC"
+metadescription = "Personal website of Siddarth Madala. I'm a PhD Candidate at UIUC studying Information Retrieval and Embodied AI"
+
+location = "Champaign, IL"
+
+[params]
+author = "Siddarth Madala"
+avatar = "/images/avatar.jpeg"
+favicon = "/images/favicon.png"
+longdescription = [
+  [
+    "PhD Candidate at UIUC",
+    ":mortar_board:",
+  ],
+  [
+    "Information Retrieval",
+    ":mag_right:",
+  ],
+  [
+    "Embodied AI",
+    ":robot:",
+  ],
+]
+
+
+email = "smadala2[at]illinois[dot]edu"
+github = "https://github.com/sidmadala"
+twitter = "https://twitter.com/sidmadala"
+linkedin = "https://linkedin.com/in/sidmadala"
+# scholar = "https://scholar.google.com/"
+
+# Needed for Hugo to work with Github pages
+# https://gohugo.io/host-and-deploy/host-on-github-pages/
+# [caches]
+[caches.images]
+dir = ':cacheDir/images'

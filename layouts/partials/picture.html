@@ -1,0 +1,38 @@
+
+{{ define "picture" }}
+
+<div>
+
+    <div class="picture">
+        <img src="{{ .Params.src | relURL }}" alt="{{ .Params.AltText }}">
+
+        <div class="content">
+            {{ .Content }}
+        </div>
+        
+    </div>
+
+    <div class="paginate-container">
+        <div class="BtnGroup">
+            {{ if .NextInSection }}
+            <a rel="nofollow" class="btn btn-outline BtnGroup-item" href="{{ .NextInSection.RelPermalink }}">{{ T "previous" }}</a>
+            {{ else }}
+            <button class="btn btn-outline BtnGroup-item" disabled="disabled">{{ T "previous" }}</button>
+            {{ end }}
+
+            {{ with .Site.GetPage "section" .Section }}
+                <a class="btn btn-outline BtnGroup-item" href="{{ .RelPermalink }}">{{ T "back-gallery" }}</a>
+            {{ end }}
+
+            {{ if .PrevInSection }}
+            <a rel="nofollow" class="btn btn-outline BtnGroup-item" href="{{ .PrevInSection.RelPermalink }}">{{ T "next" }}</a>
+            {{ else }}
+            <button class="btn btn-outline BtnGroup-item" disabled="disabled">{{ T "next" }}</button>
+            {{ end }}
+        </div>
+    </div>
+
+
+</div>
+
+{{ end }}

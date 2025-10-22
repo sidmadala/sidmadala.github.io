@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='{{ "js/theme-mode.js" | relURL }}'></script>
+    <link rel="stylesheet" href='{{ "css/frameworks.min.css" | relURL }}' />
+    <link rel="stylesheet" href='{{ "css/github.min.css" | relURL }}' />
+    <link rel="stylesheet" href='{{ "css/github-style.css" | relURL }}' />
+    <link rel="stylesheet" href='{{ "css/light.css" | relURL }}' />
+    <link rel="stylesheet" href='{{ "css/dark.css" | relURL }}' />
+    <title>{{ if .IsHome }}{{ else }}{{ humanize .Section }} - {{ end }}{{ .Site.Title }}</title>
+    {{ if .Site.Params.favicon }}
+    <link rel="icon" type="image/x-icon" href='{{ .Site.Params.favicon  }}'>
+    {{ else }}
+    <link rel="icon" type="image/x-icon" href='{{ "images/favicon.png" | relURL }}'>
+    {{ end }}
+    <meta name="theme-color" content="#1e2327">
+
+    <!-- Including custom CSS, using an SCSS file -->
+    {{ $style := resources.Get "css/sidmadala.scss" | css.Sass | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    {{ $syntaxStyleSheet := resources.Get "css/syntax.scss" | css.Sass | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $syntaxStyleSheet.RelPermalink }}" integrity="{{ $syntaxStyleSheet.Data.Integrity }}">
+
+    {{ partial "seo" . }}
+
+</head>

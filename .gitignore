@@ -1,0 +1,12 @@
+# Hugo generated content
+/public/
+/resources/_gen/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+
+# Hugo build lock file
+.hugo_build.lock
