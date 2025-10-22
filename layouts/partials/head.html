@@ -1,27 +1,52 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <script type="application/javascript" src='{{ "js/theme-mode.js" | relURL }}'></script>
-    <link rel="stylesheet" href='{{ "css/frameworks.min.css" | relURL }}' />
-    <link rel="stylesheet" href='{{ "css/github.min.css" | relURL }}' />
-    <link rel="stylesheet" href='{{ "css/github-style.css" | relURL }}' />
-    <link rel="stylesheet" href='{{ "css/light.css" | relURL }}' />
-    <link rel="stylesheet" href='{{ "css/dark.css" | relURL }}' />
-    <title>{{ if .IsHome }}{{ else }}{{ humanize .Section }} - {{ end }}{{ .Site.Title }}</title>
-    {{ if .Site.Params.favicon }}
-    <link rel="icon" type="image/x-icon" href='{{ .Site.Params.favicon  }}'>
-    {{ else }}
-    <link rel="icon" type="image/x-icon" href='{{ "images/favicon.png" | relURL }}'>
-    {{ end }}
-    <meta name="theme-color" content="#1e2327">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
 
-    <!-- Including custom CSS, using an SCSS file -->
-    {{ $style := resources.Get "css/sidmadala.scss" | css.Sass | resources.Fingerprint "sha512" }}
+  {{ with resources.Get "js/theme-mode.js" }}
+    {{ $j := . | resources.Minify | resources.Fingerprint "sha512" }}
+    <script defer src="{{ $j.RelPermalink }}" integrity="{{ $j.Data.Integrity }}"></script>
+  {{ end }}
+
+  {{ with resources.Get "css/frameworks.min.css" }}
+    {{ $c := . | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $c.RelPermalink }}" integrity="{{ $c.Data.Integrity }}" />
+  {{ end }}
+  {{ with resources.Get "css/github.min.css" }}
+    {{ $c := . | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $c.RelPermalink }}" integrity="{{ $c.Data.Integrity }}" />
+  {{ end }}
+  {{ with resources.Get "css/github-style.css" }}
+    {{ $c := . | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $c.RelPermalink }}" integrity="{{ $c.Data.Integrity }}" />
+  {{ end }}
+  {{ with resources.Get "css/light.css" }}
+    {{ $c := . | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $c.RelPermalink }}" integrity="{{ $c.Data.Integrity }}" />
+  {{ end }}
+  {{ with resources.Get "css/dark.css" }}
+    {{ $c := . | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $c.RelPermalink }}" integrity="{{ $c.Data.Integrity }}" />
+  {{ end }}
+
+  <title>{{ if .IsHome }}{{ else }}{{ humanize .Section }} - {{ end }}{{ .Site.Title }}</title>
+
+  {{ if .Site.Params.favicon }}
+    {{ $fav := .Site.Params.favicon }}
+    <link rel="icon" {{ if (hasSuffix $fav ".png") }}type="image/png"{{ else if (hasSuffix $fav ".svg") }}type="image/svg+xml"{{ else }}type="image/x-icon"{{ end }} href='{{ $fav }}'>
+  {{ else }}
+    <link rel="icon" type="image/png" href='{{ "images/favicon.png" | relURL }}'>
+  {{ end }}
+  <meta name="theme-color" content="#1e2327">
+
+  {{ with resources.Get "css/sidmadala.scss" }}
+    {{ $style := . | css.Sass | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  {{ end }}
 
-    {{ $syntaxStyleSheet := resources.Get "css/syntax.scss" | css.Sass | resources.Fingerprint "sha512" }}
-    <link rel="stylesheet" href="{{ $syntaxStyleSheet.RelPermalink }}" integrity="{{ $syntaxStyleSheet.Data.Integrity }}">
+  {{ with resources.Get "css/syntax.scss" }}
+    {{ $syntax := . | css.Sass | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}">
+  {{ end }}
 
-    {{ partial "seo" . }}
-
+  {{ partial "seo.html" . }}
 </head>
