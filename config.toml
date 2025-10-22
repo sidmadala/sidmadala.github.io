@@ -5,7 +5,7 @@ defaultContentLanguage = 'en'
 languageCode = "en-us"
 
 enableEmoji = "true"
-assetDir = "assets"
+assetDir = "static"  # Needed for deployment
 
 # This is necessary due to a bug (?) in how Hugo stores its sites
 # See: https://discourse.gohugo.io/t/multilingual-page-404-not-found/31729/3
