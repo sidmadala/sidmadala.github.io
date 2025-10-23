@@ -16,14 +16,13 @@
         {{ end }}
       </button>
       <div id="sectionDropdownMenu" class="Box dropdown-content" style="width: 150px;">
-
-        <a title="{{ T "home" }}" href="{{ .Site.BaseURL | relLangURL }}"  class="dropdown-item">
-           {{ T "home" }} 
+        <a title="{{ T "home" }}" href="{{ .Site.BaseURL | relLangURL }}" class="dropdown-item">
+          {{ T "home" }}
         </a>
 
         {{ range .Site.Sections }}
-          <a title="{{ .Language.LanguageName }}" href="{{ .RelPermalink }}" class="dropdown-item">
-            {{ T .Section }}
+          <a title="{{ .Title }}" href="{{ .RelPermalink }}" class="dropdown-item">
+            {{ humanize .Section }}
           </a>
         {{ end }}
       </div>
