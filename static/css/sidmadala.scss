@@ -375,10 +375,43 @@
     /* Adjust as needed to fully clear the mobile nav height */
     margin-top: 24px;
   }
+
+  /* Anchor the absolute toggle and reserve space to its right */
+  .user-profile-nav .UnderlineNav-body {
+    position: relative;
+    padding-right: 64px; /* keeps tabs from sitting under the toggle */
+  }
+  /* Lift the toggle above the tabs, top-right */
+  .user-profile-nav .mobile-theme-toggle {
+    position: absolute;
+    right: 8px;
+    top: -28px; /* adjust between -24px and -36px to taste */
+    z-index: 4;
+  }
+}
+
+/* Hide the name-line toggle by default (desktop), show on mobile */
+.name-theme-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .vcard-names .name-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .vcard-names .name-theme-toggle {
+    display: inline-flex;
+  }
+
+  /* Remove extra padding we previously added for the old mobile toggle */
+  .user-profile-nav .UnderlineNav-body {
+    padding-right: 0;
+  }
 }
 
 
-// #cv-download {
+/* #cv-download {
 //   // width: 250px;
 //   margin: 10px 20px;
 
@@ -394,4 +427,26 @@
 
 //     color: inherit;
 //   }
-// }
+// } */
+
+/* Center the icon inside the toggle thumb (mobile + desktop) */
+.profile-color-modes-toggle-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-color-modes-toggle-thumb svg {
+  width: 14px;
+  height: 14px;
+  margin: 0 !important; /* override any inline margins */
+}
+.theme-toggle-icon { fill: var(--color-profile-color-modes-toggle-moon); }
+
+/* Remove focus ring around the toggle on mobile */
+.profile-color-modes-toggle:focus,
+.profile-color-modes-toggle:focus-visible,
+.name-theme-toggle:focus,
+.name-theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

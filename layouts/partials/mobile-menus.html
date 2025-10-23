@@ -1,54 +1,53 @@
 <!-- The navbar for mobile users -->
 <div class="UnderlineNav user-profile-nav d-block d-md-none position-sticky top-0 pl-3 ml-n3 mr-n3 pr-3 bg-white"
   style="z-index:3;">
-  <nav class="UnderlineNav-body">
+  <nav class="UnderlineNav-body" style="margin-right: auto;">
 
+    {{/* Use same tab links as desktop */}}
+    {{ $currentSite := false }}
+    {{ range where .Sites ".Language.Lang" .Language.Lang }}
+      {{ $currentSite = . }}
+    {{ end }}
 
-    <div id="section-switch-main-div" class="dropdown-main-div" style="margin-right: auto;">
+    {{ with $currentSite.Home }}
+      <a class="UnderlineNav-item {{ if $.IsHome }} selected {{ end }}" href="{{ .RelPermalink }}">
+        {{ T "home" }}
+      </a>
+    {{ end }}
 
+    {{ with $currentSite.GetPage "/publications" }}
+      {{ if eq $.Section "publications" }}
+        <a class="UnderlineNav-item selected" href="{{ .RelPermalink }}">
+      {{ else }}
+        <a class="UnderlineNav-item" href="{{ .RelPermalink }}">
+      {{ end }}
+        {{ T "publications" }}
+        <span class="Counter">{{ len (where $currentSite.RegularPages "Section" "==" "publications") }}</span>
+      </a>
+    {{ end }}
 
-      <!-- Show current section, underlined -->
-      <button id="sectionDropdownMenuButton" class="dropdown-menu-button form-select" style="width: 150px;">
-        {{ if .IsHome }}
-          {{ T "home" }}
-        {{ else }}
-          {{ T .Section }}
-        {{ end }}
-      </button>
-      <div id="sectionDropdownMenu" class="Box dropdown-content" style="width: 150px;">
-        <a title="{{ T "home" }}" href="{{ .Site.BaseURL | relLangURL }}" class="dropdown-item">
-          {{ T "home" }}
-        </a>
+    {{ with $currentSite.GetPage "/blog" }}
+      {{ if eq $.Section "blog" }}
+        <a class="UnderlineNav-item selected" href="{{ .RelPermalink }}">
+      {{ else }}
+        <a class="UnderlineNav-item" href="{{ .RelPermalink }}">
+      {{ end }}
+        {{ T "blog" }}
+        <span class="Counter">{{ len (where $currentSite.RegularPages "Section" "==" "blog") }}</span>
+      </a>
+    {{ end }}
 
-        {{ range .Site.Sections }}
-          <a title="{{ .Title }}" href="{{ .RelPermalink }}" class="dropdown-item">
-            {{ humanize .Section }}
-          </a>
-        {{ end }}
-      </div>
+    {{ with $currentSite.GetPage "/about" }}
+      {{ if eq $.Section "about" }}
+        <a class="UnderlineNav-item selected" href="{{ .RelPermalink }}">
+      {{ else }}
+        <a class="UnderlineNav-item" href="{{ .RelPermalink }}">
+      {{ end }}
+        {{ T "about" }}
+      </a>
+    {{ end }}
 
-    </div>
-
-    {{/* Language dropdown removed on mobile */}}
-
-    <div style="margin-left: auto;">
-      <span class="profile-color-modes-toggle js-promo-color-modes-toggle no-select" 
-            tabindex="0" onclick="switchTheme()">
-        <div class="profile-color-modes-toggle-track no-select" style="margin-right: 30px"></div>
-        <div class="profile-color-modes-toggle-thumb js-promo-color-modes-thumb">
-          <svg style="fill: var(--color-profile-color-modes-toggle-moon); margin: 7px 0 0 7px;" width="14" height="13"
-            viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
-            </path>
-          </svg>
-        </div>
-      </span>
-    </div>
-
+    <!-- Toggle moved next to name on mobile -->
 
   </nav>
-
-  
-
 </div>
