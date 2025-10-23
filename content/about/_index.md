@@ -7,7 +7,7 @@ sitemap:
 
 Personal website of Siddarth Madala, PhD Candidate at UIUC.
 
-This site is powered by [Hugo](https://gohugo.io/) and hosted by [Github Pages](https://docs.github.com/en/pages). It is based on the [github-style](https://github.com/MeiK2333/github-style) theme and [Clément Rebuffel's](https://clement-rebuffel.com/) implementation. Some icons provided by [Flaticon](https://www.flaticon.com/).
+This site is powered by [Hugo](https://gohugo.io/) and hosted on [Github Pages](https://docs.github.com/en/pages). It is based on the [github-style](https://github.com/MeiK2333/github-style) theme and [Clément Rebuffel's](https://clement-rebuffel.com/) modifications. Some icons provided by [Flaticon](https://www.flaticon.com/).
 
 If you are interested in building something similar for yourself, the code is freely available on my [GitHub profile](https://github.com/sidmadala). If you find a bug, please feel free to raise an issue and I'll investigate.
 
