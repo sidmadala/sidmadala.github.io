@@ -37,12 +37,12 @@ For any inquiry, please contact me by email or via one of the following platform
     </a>
 </li>
 
-<!-- <li>
-    <a style="color: inherit;"  href="https://scholar.google.com/">
+<li>
+    <a style="color: inherit;"  href="https://scholar.google.com/citations?hl=en&user=fWvusYUAAAAJ">
     <i class="fas fa-graduation-cap"></i>
     <span> Google Scholar </span>
     </a>
-</li> -->
+</li>
 
 </ul>
 </div>
