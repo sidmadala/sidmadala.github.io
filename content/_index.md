@@ -16,7 +16,7 @@ Before that, I completed my undergraduate studies at [**Duke University**](https
 
 My research lies at the intersection of **Information Retrieval** and **Embodied AI**, building systems that can:
 
-- reason about nuanced information in contextual environments, and
+- reason about nuanced information in contextual settings, and
 - operate collaboratively with other agents or humans through dialogue and action.
 
 My doctoral work focuses on **generating semantically meaningful instructions** to enhance inter-agent and human collaboration, particularly in environments that require multimodal and spatio-temporal reasoning.
