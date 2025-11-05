@@ -25,6 +25,7 @@ My doctoral work focuses on **generating semantically meaningful instructions** 
 
 I have worked in both academic and industrial research settings.
 
+- I will be joining [**Pinterest**](https://www.pinterest.com/) this summer as a Research Intern on the Home Page Recommendations team. Reach out if you're in NYC and would like to connect!
 - At [**Epsilon**](https://www.epsilon.com/), I developed large-scale similarity search and LLM-based synthetic labeling systems for personalized advertising.
 - At [**Elemental Cognition**](https://www.linkedin.com/company/elementalcognition/), I extended semantic role labeling and named-entity recognition to document-level tasks, enabling real-time LLM-guided search.
 - At [**IBM Research**](https://research.ibm.com), I contributed to hybrid-cloud and quantum computing projects, optimizing large-scale Optical Proximity Correction and Electronic Design Automation workflows.
