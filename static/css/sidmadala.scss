@@ -390,6 +390,13 @@
   }
 }
 
+@media (min-width: 768px) {
+  /* Counter the theme's negative margin so the avatar clears the divider */
+  .h-card.mt-md-n5 {
+    margin-top: 24px !important;
+  }
+}
+
 /* Hide the name-line toggle by default (desktop), show on mobile */
 .name-theme-toggle { display: none; }
 
