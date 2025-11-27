@@ -10,7 +10,7 @@ sitemap:
 
 I am a **PhD Candidate** advised by [**Prof. Julia Hockenmaier**](https://hmr-lab.github.io/) at the [**University of Illinois Urbana-Champaign**](https://illinois.edu/).
 
-Before that, I completed my undergraduate studies at [**Duke University**](https://duke.edu/), where I majored in computer science and statistics with a minor in mathematics. At Duke, I explored applications of machine learning to hardware research under [**Professor Krishnendu Chakrabarty**](https://search.asu.edu/profile/4669916), then Chair of Electrical and Computer Engineering.
+Before that, I completed my undergraduate studies at [**Duke University**](https://duke.edu/), where I majored in computer science and statistics with a minor in mathematics. At Duke, I explored applications of machine learning to hardware research under [**Prof. Krishnendu Chakrabarty**](https://search.asu.edu/profile/4669916), then Chair of Electrical and Computer Engineering.
 
 ### Research
 
