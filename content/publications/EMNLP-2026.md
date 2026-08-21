@@ -11,7 +11,7 @@ authors:
     ["Julia Hockenmaier", "https://hmr-lab.github.io/"],
   ]
 arxiv: "https://arxiv.org/abs/2606.05402v1"
-conference: ["The 13th Workshop on Argument Mining and Reasoning", "https://argmining-org.github.io/2026/"]
+conference: ["EMNLP 2026 Main", "https://2026.emnlp.org/"]
 
 sitemap_exclude: True
 ---
