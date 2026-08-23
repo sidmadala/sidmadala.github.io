@@ -11,7 +11,7 @@ authors:
     ["Julia Hockenmaier", "https://hmr-lab.github.io/"],
   ]
 arxiv: "https://arxiv.org/abs/2606.05402v1"
-conference: ["EMNLP 2026 Main", "https://2026.emnlp.org/"]
+conference: ["EMNLP Main 2026", "https://2026.emnlp.org/"]
 
 sitemap_exclude: True
 ---
