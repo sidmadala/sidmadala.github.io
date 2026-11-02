@@ -10,7 +10,7 @@ authors:
     ["Dilek Hakkani-Tür", "https://uiuc-conversational-ai-lab.github.io/"],
     ["Julia Hockenmaier", "https://hmr-lab.github.io/"],
   ]
-arxiv: "https://arxiv.org/abs/2606.05402v1"
+arxiv: "https://aclanthology.org/2026.emnlp-main.670/"
 conference: ["EMNLP Main 2026", "https://2026.emnlp.org/"]
 
 sitemap_exclude: True

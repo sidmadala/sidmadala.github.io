@@ -29,7 +29,7 @@ noClasses = false
 # LanguageName = "English"
 
 shortdescription = "PhD Candidate at UIUC"
-metadescription = "Personal website of Siddarth Madala. I'm a PhD Candidate at UIUC studying Information Retrieval and Embodied AI"
+metadescription = "Personal website of Siddarth Madala. I'm a PhD Candidate at UIUC studying Representation Learning and Energy-based Models"
 
 location = "Champaign, IL"
 
@@ -43,12 +43,12 @@ longdescription = [
     ":mortar_board:",
   ],
   [
-    "Information Retrieval",
+    "Representation Learning",
     ":mag_right:",
   ],
   [
-    "Embodied AI",
-    ":robot:",
+    "Energy-based Models",
+    ":battery:",
   ],
 ]
 

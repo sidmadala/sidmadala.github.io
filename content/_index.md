@@ -14,17 +14,13 @@ Before that, I completed my undergraduate studies at [**Duke University**](https
 
 ### Research
 
-My research lies at the intersection of **Information Retrieval** and **Embodied AI**, building systems that can:
-
-- reason about nuanced information in contextual settings, and
-- operate collaboratively with other agents or humans through dialogue and action.
-
-My doctoral work focuses on **generating semantically meaningful instructions** to enhance inter-agent and human collaboration, particularly in environments that require multimodal and spatio-temporal reasoning.
+My research lies at the intersection of **Representation Learning** and **Energy-based Models**, building systems that can learn robust representations via latent-space prediction to jointly align multimodal/lingual data.
 
 ### Work
 
 I have worked in both academic and industrial research settings.
 
+- I'll be joining [**Balyasny Asset Management**](https://www.bamfunds.com/) this upcoming summer as a Quantitative Research Intern on their Systematic Strategies arm. If you're in NYC, I'd love to connect!
 - At [**Pinterest**](https://www.pinterest.com/), I integrated vision-language model features into large-scale recommendation systems, improving ranking quality and efficiency across major surfaces such as Homefeed.
 - At [**Epsilon**](https://www.epsilon.com/), I developed large-scale similarity search and LLM-based synthetic labeling systems for personalized advertising.
 - At [**Elemental Cognition**](https://www.linkedin.com/company/elementalcognition/), I extended semantic role labeling and named-entity recognition to document-level tasks, enabling real-time LLM-guided search.
